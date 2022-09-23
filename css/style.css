@@ -12,128 +12,195 @@ body{
 /*Mobile: Header*/
 header {
     background-color: rgba(0, 0, 0, 0.9);
-    padding: 0.75rem 1.5rem;
+    padding: 2rem 5rem 1.5rem 5rem;
     position: sticky;
-        top: 0%;
-        z-index: 2;
+    top: 0%;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
 }
 
-header .nav-menu ul{
-    display: none;
+header .imagotipo img{
+    height: 80%;
+}
+
+header .nav-menu{
+    background-color: #1f1f1f;
+    border: rgb(186, 186, 186) solid 2px;
+    border-radius: 2rem;
+}
+
+header .nav-menu .menu-boton {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(203, 203, 203);
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 1rem;
+}
+
+header .nav-menu .menu-boton:hover {
+    font-weight: 700;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 1.6rem;
+}
+
+header .nav-menu .button-focus {
+    font-weight: 900;
+    color: white;
 }
 
 
+/*Mobile: Main: Página de Inicio*/
+main.pagina-inicio{
+    height: 100vh;
+    padding: 3.75rem 5rem 1.25rem 5rem;
+    background-image: url("../img/img-planeta.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+main.pagina-inicio h1{
+    font-weight: 700;
+    font-size: 2.75rem;
+    line-height: 3.37rem;
+    text-align: left;
+    color: white;
+}
+
+main.pagina-inicio h1 .h1-light{
+    font-weight: 300;
+    text-align: left;
+    display: block;
+}
+
+main.pagina-inicio h4{
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 18rem;
+}
+
+main.pagina-inicio .icon-down{
+    padding: 0.62rem;
+    text-align: center;
+}
+main.pagina-inicio .icon-down:hover{
+    animation-name: indicate-down;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+}
+@keyframes indicate-down{
+    0%{transform: translateY(0)}
+    100%{transform: translateY(6px);}
+}
+
+
+/*Mobile: Section: Viaje espacial*/
+section.viaje-espacial {
+    height: 100vh;
+    background-image: url(../img/gif-space-orbital.gif);
+    background-size: cover;
+}
+
+.viaje-espacial .secondary-menu ul{
+    display: flex;
+    background-color: #cbcbcb;
+    margin: 34px 0 34px 0;
+    padding-left: 0;
+    justify-content: space-between;
+}
+
+.viaje-espacial .secondary-menu ul li {
+    color: black;
+    list-style: none;
+    text-align: center;
+    font-weight: 400;
+    font-size: .9rem;
+    padding: 1rem 2rem;
+}
+
+.viaje-espacial .secondary-menu ul li:hover {
+    background-color: #E8E8E8;
+}
+
+.viaje-espacial .secondary-menu ul .button-focus {
+    background-color: #FAFAFA;
+    font-weight: 700;
+    box-shadow: 4px 0px 4px grey;
+}
+
+
+.viaje-espacial .bar-vertical {
+    display: flex;
+    justify-content: center;
+}
+
+.viaje-espacial .bar-vertical li {
+    color: white;
+    border-radius: 28px;
+    list-style: none;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 12px 34px;
+    text-align: center;
+    margin: 12px;
+}
+
+.viaje-espacial .bar-vertical li:hover {
+    background-color: rgba(116, 116, 116, 0.25);
+    font-weight: 700;
+}
+
+.viaje-espacial .bar-vertical .button-focus {
+    border: 3px solid white;
+    font-weight: 700;
+    background-color: rgba(96, 96, 96, 0.25);
+}
+
+.viaje-espacial .img-scroll {
+    grid-area: img-scroll;
+    overflow: hidden scroll;
+    width: 20rem;
+}
+
+.viaje-espacial .img-scroll img {
+    margin-left: .5rem;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.viaje-espacial .img-scroll img:hover {
+    transform: scale(1.02);
+}
+
+
+
 /* MEDIA QUERIES DESKTOP */
-@media screen and (min-width:1200px)
+@media screen and (min-width:800px)
 {
     /*Desktop: Header*/
-    header {
-        background-color: rgba(0, 0, 0, 0.9);
-        padding: 2rem 5rem 1rem 5rem;
-        position: sticky;
-            top: 0%;
-            z-index: 2;
-        display: flex;
-        justify-content: space-between;
-        }
-    
-    header .nav-menu-hamburguesa {
-        display:none
+    header .nav-menu .menu-boton{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0rem;
     }
 
-    header .logo img{
-        height: 90%;
+    header .imagotipo img{
+        height: 100%;
     }
-
-    header .nav-menu ul{
-        display: block;
-        background-color: #3A3A3A;
-        border-radius: 1.6rem;
-        display: flex;
-        gap: 0.5rem;
-    }
-
-    header .nav-menu ul li{
-        font-weight: 400;
-        font-size: 14px;
-        text-align: center;
-        background-color: #3A3A3A;
-        list-style: none;
-        border-radius: 1.6rem;
-        padding: 12px 24px;
-
-    }
-    header .nav-menu ul li:hover{
-        font-weight: 700;
-    }
-
-    header .nav-menu ul li a{
-        text-decoration: none;
-        color: white;
-    }
-
-    header .nav-menu ul .button-focus{
-        border: 0.125rem solid white;
-    }
-
-
 
     /*Desktop: Main: Página de Inicio*/
-    main.pagina-inicio{
-        height: 100vh;
-        padding: 3.75rem 5rem 1.25rem 5rem;
-        background-image: url("../img/img-planeta.jpg");
-        background-size: cover;
-        background-position: 0;
-    }
-
-    main.pagina-inicio h1{
-        font-weight: 700;
-        font-size: 2.75rem;
-        line-height: 3.37rem;
-        text-align: left;
-        color: white;
-    }
-
-    main.pagina-inicio h1 .h1-light{
-        font-weight: 300;
-        text-align: left;
-        display: block;
-    }
-
     main.pagina-inicio h4{
-        font-weight: 500;
-        font-size: 1.25rem;
-        line-height: 1.5rem;
-        color: white;
-        text-align: center;
-        margin-top: 350px;
+        margin-top: 22rem;
     }
-
-    main.pagina-inicio .icon-down{
-        padding: 0.62rem;
-        text-align: center;
-    }
-    main.pagina-inicio .icon-down:hover{
-        animation-name: indicate-down;
-        animation-duration: .8s;
-        animation-iteration-count: infinite;
-    }
-    @keyframes indicate-down{
-        0%{transform: translateY(0)}
-        100%{transform: translateY(6px);}
-    }
-
-
 
     /*Desktop: Section: Viaje espacial*/
     section.viaje-espacial{
-        height: 100vh;
         padding: 3.75rem 5rem 1.25rem 5rem;
-        background-image: url(../img/gif-space-orbital.gif);
-        background-size: cover;
         display: grid;
             grid-template-columns: .3fr 1fr .4fr;
             grid-template-areas: 
@@ -147,20 +214,13 @@ header .nav-menu ul{
         justify-self: center;
     }
     .viaje-espacial .secondary-menu ul{
-        display: flex;
-        background-color: #cbcbcb;
         border-radius: 16px;
-        margin: 34px 0 34px 0;
         gap: 1rem;
     }
     .viaje-espacial .secondary-menu ul li{
-        color: black;
-        list-style: none;
-        text-align: center;
-        font-weight: 400;
         font-size: 1rem;
         border-radius: 1rem;
-        padding: 16px 54px;
+        padding: 1rem 3rem;
     }
     .viaje-espacial .secondary-menu ul li:hover{
         background-color: #E8E8E8;
@@ -175,32 +235,16 @@ header .nav-menu ul{
         grid-area: menu-vertical;
         justify-self: center;
         align-self: center;
+        flex-direction: column;
     }
     .viaje-espacial .bar-vertical li{
-        color: white;
-        border-radius: 28px;
-        list-style: none;
-        font-weight: 400;
-        font-size: 14px;
-        padding: 12px 34px;
-        text-align: center;
         margin: 12px 0 12px 0;
-    }
-    .viaje-espacial .bar-vertical li:hover{
-        background-color: rgba(116, 116, 116, 0.25);
-        font-weight: 700;
-    }
-    .viaje-espacial .bar-vertical .button-focus{
-        border: 3px solid white;
-        font-weight: 700;
-        background-color: rgba(96, 96, 96, 0.25);
     }
 
     .viaje-espacial .img-scroll{
         grid-area: img-scroll;
         overflow: hidden scroll;
-        height: 90%;
-        border-radius: 12px;
+        height: 28rem;
     }
     .viaje-espacial .img-scroll img{
         margin-bottom: 4px;
@@ -210,15 +254,15 @@ header .nav-menu ul{
     .viaje-espacial .img-scroll img:hover{
         transform: scale(1.02);
     }
-
+    .viaje-espacial .carrusel-mobile{
+        display: none;
+    }
 
 
     /*Desktop: Section: Viaje especificaciones*/
     section.viaje-especificaciones{
         height: 100vh;
         padding: 3.75rem 5rem 3rem 5rem;
-        background-image: url();
-        background-size: cover;
         display: grid;
             grid-template-columns: 1fr 1fr 1fr .5fr;
             grid-template-areas:
@@ -246,6 +290,7 @@ header .nav-menu ul{
         width: auto;
         justify-self: center;
         align-self: center;
+        margin-left: 2rem;
     }
 
     .viaje-especificaciones .pie-linea{
@@ -372,14 +417,15 @@ header .nav-menu ul{
     /* Desktop: Footer */
     footer {
         background-color: #3A3A3A;
-        padding: 40px 80px;
+        padding: 40px 80px 30px 80px;
         display: flex;
             justify-content: space-between;
-        margin-top: 6rem;
+        margin-top: 4rem;
     }
     footer .otros-enlaces{
         display: flex;
         list-style: none;
+        align-items: center;
     }
     footer .otros-enlaces li a{
         font-weight: 400;
