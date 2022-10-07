@@ -315,3 +315,88 @@ footer {
         }
     }
 }
+
+
+@media screen and (min-width:768px) {
+
+    /*Desktop: Header*/
+    header{
+        .nav-menu{
+            .menu-boton{
+                margin: 0rem 1rem 0rem 1rem;
+            }
+        }
+        .logo {
+            display: none;
+        }
+        .imagotipo {
+            display: block;
+            img {
+                height: 3.6rem;
+            }
+        }
+    }
+
+    /*Desktop: Main: Página de Inicio*/
+    main.pagina-inicio{
+        h4 {
+            margin-top: 22rem;
+        }
+    }
+
+    /*Desktop: Section: Viaje espacial*/
+    section.viaje-espacial {
+        height: 100vh;
+        background-size: cover;
+        padding: 3.75rem 5rem 1.25rem 5rem;
+        display: grid;
+        grid-template-columns: .3fr 1fr .4fr;
+        grid-template-areas:
+            "menu-secundario menu-secundario menu-secundario"
+            "menu-vertical gif-viaje img-scroll";
+        gap: 10px;
+        .secondary-menu {
+            grid-area: menu-secundario;
+            justify-self: center;
+            ul {
+                border-radius: 16px;
+                gap: 1rem;
+                li {
+                    font-size: 1rem;
+                    border-radius: 1rem;
+                    padding: 1rem 3rem;
+                }
+            }
+        }
+        .bar-vertical {
+            grid-area: menu-vertical;
+            justify-self: center;
+            align-self: center;
+            flex-direction: column;
+            li {
+                margin: 0.75rem 0 0.75rem 0;
+            }
+        }
+        .img-scroll {
+            display: block;
+            grid-area: img-scroll;
+            overflow: hidden scroll;
+            height: 28rem;
+            border-radius: 0.75rem;
+            img {
+                margin-bottom: 4px;
+                width: 100%;
+                border-radius: 0.75rem;
+                &:hover{
+                    transform: scale(1.02);
+                }
+                &:active{
+                    transform: scale(0.99);
+                }
+            }
+        }
+        .carrusel-mobile {
+            display: none;
+        }
+    }
+}
