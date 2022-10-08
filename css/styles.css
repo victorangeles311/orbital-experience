@@ -1,61 +1,169 @@
 @charset "UTF-8";
+header {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2rem 5rem 1.5rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0%;
+  z-index: 2; }
+
+main.pagina-tecnologia, main.pagina-inicio {
+  height: 100vh;
+  padding: 3.75rem 5rem 1.25rem 5rem;
+  background-size: cover;
+  background-position: center; }
+
+/*Mobile: Main: Página de Tecnología*/
+main.pagina-tecnologia {
+  background-image: url("../img/img-astronauta.png"); }
+  main.pagina-tecnologia h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.75rem;
+    line-height: 3.37rem;
+    color: white;
+    margin-top: 1rem; }
+    main.pagina-tecnologia h1 .h1-light {
+      font-weight: 300; }
+  main.pagina-tecnologia .icon-down {
+    text-align: center;
+    padding: 0.62rem;
+    animation-name: indicate-down;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    margin-top: 22rem; }
+
+@keyframes indicate-down {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(6px); } }
+
+/*Mobile: Section: Transportes y bases espaciales*/
+section.transportes-bases {
+  padding: 4rem 5rem 1rem 5rem; }
+  section.transportes-bases h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: white;
+    margin-bottom: 3rem; }
+    section.transportes-bases h2 .h2-light {
+      font-weight: 300;
+      display: block; }
+  section.transportes-bases .cards-tecnologia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem 0; }
+    section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor {
+      width: 24rem; }
+      section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .card-tecnologia-imagen {
+        background-size: cover;
+        padding: 16rem 2rem 2rem 2rem;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        text-align: end; }
+        section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .card-tecnologia-imagen h3 {
+          text-align: Left;
+          font-weight: 400;
+          font-size: 1.5rem;
+          line-height: 2.12rem;
+          color: white;
+          margin-bottom: 1rem; }
+        section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .card-tecnologia-imagen button {
+          font-weight: 500;
+          font-size: 1rem;
+          background-color: #dcdcdc;
+          padding: 0.75rem 1rem;
+          border: none;
+          border-radius: .5rem;
+          box-shadow: 0.2rem 0.2rem 0.2rem #414141; }
+          section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .card-tecnologia-imagen button:hover {
+            transform: scale(1.01);
+            box-shadow: 0.3rem 0.3rem 0.3rem #353535; }
+          section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .card-tecnologia-imagen button:active {
+            background-color: #c5c5c5;
+            transform: scale(0.99);
+            box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
+      section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .tecnologia-img-uno {
+        background-image: url(../img/img-transporte-1.png); }
+      section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .tecnologia-img-dos {
+        background-image: url(../img/img-transporte-2.png); }
+      section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .tecnologia-img-tres {
+        background-image: url(../img/img-transporte-3.png); }
+      section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .tecnologia-img-cuatro {
+        background-image: url(../img/img-transporte-4.png); }
+      section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .tecnologia-img-cinco {
+        background-image: url(../img/img-base-1.png); }
+      section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .tecnologia-img-seis {
+        background-image: url(../img/img-base-2.png); }
+      section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor h4 {
+        text-align: left;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: white;
+        margin-left: 1rem; }
+      section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor ul {
+        padding-left: 3rem;
+        color: #bfbfbf;
+        font-weight: 400;
+        font-size: 0.87rem;
+        line-height: 1.75rem;
+        list-style: square; }
+
+/* MEDIA QUERIES DESKTOP */
+@media screen and (min-width: 768px) {
+  /*Desktop: Main: Página de Tecnología*/
+  main.pagina-tecnologia .icon-down {
+    margin-top: 26rem; } }
+
 /*Reset*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-/*Estilos de Body*/
+/*Body*/
 body {
   background-color: #0b0b0b;
   font-family: "Roboto", sans-serif; }
 
 /*Mobile: Header*/
-header {
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 2rem 5rem 1.5rem 5rem;
-  position: sticky;
-  top: 0%;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between; }
-  header .logo img {
-    height: 3.8rem; }
-  header .imagotipo {
-    display: none; }
-  header .nav-menu {
-    background-color: #212121;
-    border: #bababa solid 2px;
-    border-radius: 2rem; }
-    header .nav-menu .menu-boton {
-      text-align: center;
-      text-decoration: none;
-      color: #cbcbcb;
-      font-weight: 300;
-      margin-top: 1rem; }
-      header .nav-menu .menu-boton:hover {
-        font-weight: 700;
-        color: white;
-        background-color: rgba(255, 255, 255, 0.02);
-        border-radius: 1.6rem; }
-      header .nav-menu .menu-boton:active {
-        color: #cecece;
-        background-color: rgba(255, 255, 255, 0.06); }
-    header .nav-menu .button-focus {
-      font-weight: 900;
-      color: white; }
-    header .nav-menu .color-menu {
-      color: white; }
+header .logo img {
+  height: 3.8rem; }
+
+header .imagotipo {
+  display: none; }
+
+header .nav-menu {
+  background-color: #1a1a1a;
+  border: #bababa solid 2px;
+  border-radius: 2rem; }
+  header .nav-menu .menu-boton {
+    text-align: center;
+    color: #cbcbcb;
+    border-radius: 1.6rem;
+    margin-top: 1rem; }
+    header .nav-menu .menu-boton:hover {
+      font-weight: 700;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.02); }
+    header .nav-menu .menu-boton:active {
+      color: #cecece;
+      background-color: rgba(255, 255, 255, 0.06); }
+  header .nav-menu .button-focus {
+    font-weight: 900;
+    color: white; }
 
 /*Mobile: Main: Página de Inicio*/
 main.pagina-inicio {
-  height: 100vh;
-  padding: 3.75rem 5rem 1.25rem 5rem;
-  background-image: url("../img/img-planeta.jpg");
-  background-size: cover;
-  background-position: center; }
+  background-image: url("../img/img-planeta.png"); }
   main.pagina-inicio h1 {
-    text-align: left;
+    text-align: center;
     font-weight: 700;
     font-size: 2.75rem;
     line-height: 3.37rem;
@@ -71,8 +179,8 @@ main.pagina-inicio {
     color: white;
     margin-top: 18rem; }
   main.pagina-inicio .icon-down {
-    padding: 0.62rem;
     text-align: center;
+    padding: 0.62rem;
     animation-name: indicate-down;
     animation-duration: .8s;
     animation-iteration-count: infinite; }
@@ -142,6 +250,7 @@ section.viaje-espacial {
 section.viaje-especificaciones {
   padding: 3.75rem 5rem 3rem 5rem; }
   section.viaje-especificaciones h2 {
+    text-align: Left;
     font-weight: 700;
     font-size: 2rem;
     line-height: 2.5rem;
@@ -177,35 +286,36 @@ section.viaje-especificaciones {
       font-size: 1.25rem;
       line-height: 1.5rem;
       color: white; }
-  section.viaje-especificaciones .titulo-info {
-    color: white;
+  section.viaje-especificaciones h4.titulo-info {
+    text-align: left;
     font-weight: 500;
     font-size: 1.25rem;
-    line-height: 2.5rem;
-    align-self: end; }
+    line-height: 1.5rem;
+    color: white; }
   section.viaje-especificaciones .listado-uno {
+    padding-left: 2rem;
     color: #bfbfbf;
     font-weight: 400;
     font-size: 0.87rem;
     line-height: 1.75rem;
-    padding-left: 2rem;
     list-style: square; }
   section.viaje-especificaciones .listado-dos {
+    padding-left: 2rem;
     color: #bfbfbf;
     font-weight: 400;
     font-size: 0.87rem;
     line-height: 1.75rem;
     list-style: square; }
   section.viaje-especificaciones .form-check {
-    align-self: center;
     margin-top: 5rem; }
     section.viaje-especificaciones .form-check .form {
-      background-color: #141414;
+      background-color: #1a1a1a;
       border: 2px solid white;
       border-radius: 0.62rem;
       text-align: center;
       padding: 2rem; }
       section.viaje-especificaciones .form-check .form h3 {
+        text-align: center;
         font-weight: 400;
         font-size: 1.5rem;
         line-height: 2.12rem;
@@ -216,7 +326,7 @@ section.viaje-especificaciones {
         font-weight: 400;
         font-size: 0.87rem;
         line-height: 1.5rem;
-        padding-bottom: 2rem; }
+        padding-bottom: 1.5rem; }
       section.viaje-especificaciones .form-check .form span {
         color: #dbdbdb;
         font-weight: 400;
@@ -230,22 +340,21 @@ section.viaje-especificaciones {
         color: white;
         padding-top: 1rem; }
       section.viaje-especificaciones .form-check .form button {
-        font-weight: 700;
+        font-weight: 500;
         font-size: 1rem;
-        line-height: 1.5rem;
-        color: black;
+        background-color: #dcdcdc;
         padding: 0.75rem 1rem;
-        margin-top: .5rem;
-        margin-bottom: 2rem;
-        background-color: #FAFAFA;
-        border-radius: 1rem;
-        border: none; }
+        border: none;
+        border-radius: .5rem;
+        box-shadow: 0.2rem 0.2rem 0.2rem #414141;
+        margin-top: 1rem; }
         section.viaje-especificaciones .form-check .form button:hover {
           transform: scale(1.01);
-          background-color: #eaeaea; }
+          box-shadow: 0.3rem 0.3rem 0.3rem #353535; }
         section.viaje-especificaciones .form-check .form button:active {
+          background-color: #c5c5c5;
           transform: scale(0.99);
-          background-color: #cfcfcf; }
+          box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
 
 /* Mobile: Footer */
 footer {
@@ -270,17 +379,17 @@ footer {
           font-weight: 400;
           text-decoration: none;
           color: #d1d1d1; }
-  footer .autor {
+  footer .derechos {
     font-weight: 300;
     font-size: 0.87rem;
     line-height: 20px;
     color: white;
     text-align: center;
     padding-left: 2.5rem; }
-    footer .autor span {
+    footer .derechos span {
       display: block; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   /*Desktop: Header*/
   header .nav-menu .menu-boton {
     margin: 0rem 1rem 0rem 1rem; }
@@ -289,7 +398,7 @@ footer {
   header .imagotipo {
     display: block; }
     header .imagotipo img {
-      height: 3.6rem; }
+      height: 3.8rem; }
   /*Desktop: Main: Página de Inicio*/
   main.pagina-inicio h4 {
     margin-top: 22rem; }
@@ -334,4 +443,51 @@ footer {
         section.viaje-espacial .img-scroll img:active {
           transform: scale(0.99); }
     section.viaje-espacial .carrusel-mobile {
-      display: none; } }
+      display: none; }
+  /*Desktop: Section: Viaje especificaciones*/
+  section.viaje-especificaciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr .5fr;
+    grid-template-areas: "titulo-viaje titulo-viaje titulo-viaje titulo-viaje" "linea-proceso linea-proceso linea-proceso linea-proceso" "pie-linea pie-linea pie-linea pie-linea" "principal-info principal-info form-check form-check" "titulo-info titulo-info form-check form-check" "listado-uno listado-dos form-check form-check";
+    gap: 0.62rem; }
+    section.viaje-especificaciones .titulo-viaje {
+      grid-area: titulo-viaje; }
+    section.viaje-especificaciones .linea-proceso {
+      display: block;
+      grid-area: linea-proceso;
+      justify-self: center;
+      margin-left: 2rem; }
+    section.viaje-especificaciones .pie-linea {
+      grid-area: pie-linea;
+      display: flex;
+      flex-direction: row;
+      gap: 14rem; }
+    section.viaje-especificaciones .principal-info {
+      grid-area: principal-info; }
+    section.viaje-especificaciones .titulo-info {
+      grid-area: titulo-info;
+      padding-bottom: 0; }
+    section.viaje-especificaciones .listado-uno {
+      grid-area: listado-uno; }
+    section.viaje-especificaciones .listado-dos {
+      grid-area: listado-dos; }
+    section.viaje-especificaciones .form-check {
+      grid-area: form-check;
+      margin-top: 2rem;
+      padding: 0; }
+  /* Desktop: Footer */
+  footer {
+    padding: 3.5rem 5rem 1.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem; }
+    footer .otros-enlaces {
+      display: flex; }
+      footer .otros-enlaces li a {
+        padding: 0rem 2.18rem; }
+    footer .derechos {
+      text-align: end; }
+      footer .derechos span {
+        display: inline; }
+      footer .derechos .autor {
+        display: block; } }

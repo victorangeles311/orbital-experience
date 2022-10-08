@@ -1,4 +1,6 @@
-//Títulos (H)
+//MIXINS
+
+//Titles
 @mixin h1 ($text-align) {
     text-align: $text-align;
     font-weight: 700;
@@ -6,13 +8,15 @@
     line-height: 3.37rem;
     color: nth($colores, 1);
 }
-@mixin h2 {
+@mixin h2 ($text-align) {
+    text-align: $text-align;
     font-weight: 700;
     font-size: 2rem;
     line-height: 2.5rem;
     color: nth($colores, 1);
 }
-@mixin h3 {
+@mixin h3 ($text-align) {
+    text-align: $text-align;
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 2.12rem;
@@ -24,4 +28,47 @@
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: nth($colores, 1);
+}
+
+//Buttons
+@mixin button {
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: #dcdcdc;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgb(65, 65, 65);
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 0.3rem 0.3rem 0.3rem rgb(53, 53, 53);
+    }
+    &:active {
+        background-color: #c5c5c5;
+        transform: scale(0.99);
+        box-shadow: 0.1rem 0.1rem 0.1rem rgb(53, 53, 53);
+    }
+}
+
+//Animation
+@mixin icon-down {
+    text-align: center;
+    padding: 0.62rem;
+    animation-name: indicate-down;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    @keyframes indicate-down {
+        0% {transform: translateY(0)}
+        100% {transform: translateY(6px)}
+    }
+}
+
+//List (ul)
+@mixin list ($padding-left) {
+    padding-left: $padding-left;
+    color: rgb(191, 191, 191);
+    font-weight: 400;
+    font-size: 0.87rem;
+    line-height: 1.75rem;
+    list-style: square;
 }

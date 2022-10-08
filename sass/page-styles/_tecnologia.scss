@@ -1,0 +1,86 @@
+/*Mobile: Main: Página de Tecnología*/
+main.pagina-tecnologia {
+    @extend %main-image;
+    background-image: url("../img/img-astronauta.png");
+    h1 {
+        @include h1 (center);
+        margin-top: 1rem;
+        .h1-light {
+            font-weight: 300;
+        }
+    }
+    .icon-down {
+        @include icon-down;
+        margin-top: 22rem;
+    }
+}
+
+/*Mobile: Section: Transportes y bases espaciales*/
+section.transportes-bases {
+    padding: 4rem 5rem 1rem 5rem;
+    h2 {
+        @include h2 (center);
+        margin-bottom: 3rem;
+        .h2-light {
+            font-weight: 300;
+            display: block;
+        }
+    }
+    .cards-tecnologia {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 4rem 0;
+        .card-tecnologia-contenedor {
+            width: 24rem;
+            .card-tecnologia-imagen {
+                background-size: cover;
+                padding: 16rem 2rem 2rem 2rem;
+                border-radius: 1rem;
+                margin-bottom: 1rem;
+                text-align: end;
+                h3 {
+                    @include h3 (Left);
+                    margin-bottom: 1rem;
+                }
+                button {
+                    @include button;
+                }
+            }
+            .tecnologia-img-uno {
+                background-image: url(../img/img-transporte-1.png);
+            }
+            .tecnologia-img-dos {
+                background-image: url(../img/img-transporte-2.png);
+            }
+            .tecnologia-img-tres {
+                background-image: url(../img/img-transporte-3.png);
+            }
+            .tecnologia-img-cuatro {
+                background-image: url(../img/img-transporte-4.png);
+            }
+            .tecnologia-img-cinco {
+                background-image: url(../img/img-base-1.png);
+            }
+            .tecnologia-img-seis {
+                background-image: url(../img/img-base-2.png);
+            }
+            h4 {
+                @include h4 (left);
+                margin-left: 1rem;
+            }
+            ul {
+                @include list (3rem);
+            }
+        }
+    }
+}
+
+/* MEDIA QUERIES DESKTOP */
+@media screen and (min-width:768px) {
+    
+    /*Desktop: Main: Página de Tecnología*/
+    main.pagina-tecnologia .icon-down {
+        margin-top: 26rem;
+    }
+}
