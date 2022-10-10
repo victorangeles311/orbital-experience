@@ -8,7 +8,7 @@ header {
   top: 0%;
   z-index: 2; }
 
-main.pagina-tecnologia, main.pagina-inicio {
+main.pagina-tecnologia, main.pagina-tripulacion, main.pagina-inicio {
   height: 100vh;
   padding: 3.75rem 5rem 1.25rem 5rem;
   background-size: cover;
@@ -32,7 +32,7 @@ main.pagina-tecnologia {
     animation-name: indicate-down;
     animation-duration: .8s;
     animation-iteration-count: infinite;
-    margin-top: 22rem; }
+    margin-top: 22.5rem; }
 
 @keyframes indicate-down {
   0% {
@@ -51,12 +51,12 @@ section.transportes-bases {
     color: white;
     margin-bottom: 3rem; }
     section.transportes-bases h2 .h2-light {
-      font-weight: 300;
-      display: block; }
+      display: block;
+      font-weight: 300; }
   section.transportes-bases .cards-tecnologia {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 4rem 0; }
     section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor {
       width: 24rem; }
@@ -83,9 +83,10 @@ section.transportes-bases {
           box-shadow: 0.2rem 0.2rem 0.2rem #414141; }
           section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .card-tecnologia-imagen button:hover {
             transform: scale(1.01);
-            box-shadow: 0.3rem 0.3rem 0.3rem #353535; }
+            box-shadow: 0.2rem 0.2rem 0.3rem #868686; }
           section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .card-tecnologia-imagen button:active {
-            background-color: #c5c5c5;
+            color: white;
+            background-color: #747474;
             transform: scale(0.99);
             box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
       section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .tecnologia-img-uno {
@@ -120,6 +121,244 @@ section.transportes-bases {
   /*Desktop: Main: Página de Tecnología*/
   main.pagina-tecnologia .icon-down {
     margin-top: 26rem; } }
+
+/*Mobile: Main: Página de Tripulación*/
+main.pagina-tripulacion {
+  background-image: url("../img/img-infinito.png"); }
+  main.pagina-tripulacion h1 {
+    text-align: right;
+    font-weight: 700;
+    font-size: 2.75rem;
+    line-height: 3.37rem;
+    color: white;
+    margin-top: 1.5rem; }
+    main.pagina-tripulacion h1 .h1-light {
+      display: block;
+      font-weight: 300; }
+  main.pagina-tripulacion h4 {
+    text-align: right;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: white;
+    margin-top: 1rem; }
+    main.pagina-tripulacion h4 .autor-frase {
+      display: block;
+      font-weight: 400;
+      font-style: italic;
+      margin-top: .5rem; }
+  main.pagina-tripulacion .icon-down {
+    text-align: center;
+    padding: 0.62rem;
+    animation-name: indicate-down;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    margin-top: 12.5rem; }
+
+@keyframes indicate-down {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(6px); } }
+
+/*Mobile: Section: Tripulación*/
+section.tripulacion {
+  padding: 4rem 5rem 1rem 5rem; }
+  section.tripulacion h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: white;
+    margin-bottom: 3rem; }
+    section.tripulacion h2 .h2-light {
+      display: block;
+      font-weight: 300; }
+  section.tripulacion .cards-tripulacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 4rem 0; }
+    section.tripulacion .cards-tripulacion .card-tripulacion-informacion {
+      height: auto;
+      width: auto;
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+      background-color: #1a1a1a;
+      border-radius: 1rem; }
+      section.tripulacion .cards-tripulacion .card-tripulacion-informacion .img-tripulacion {
+        margin-bottom: 1rem;
+        height: 18rem; }
+        section.tripulacion .cards-tripulacion .card-tripulacion-informacion .img-tripulacion img {
+          height: 100%;
+          border-radius: 1rem; }
+      section.tripulacion .cards-tripulacion .card-tripulacion-informacion h3 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.12rem;
+        color: white; }
+      section.tripulacion .cards-tripulacion .card-tripulacion-informacion p {
+        color: #bfbfbf;
+        font-weight: 400;
+        font-size: 0.87rem;
+        line-height: 1.75rem; }
+      section.tripulacion .cards-tripulacion .card-tripulacion-informacion .button-tripulacion button {
+        font-weight: 500;
+        font-size: 1rem;
+        background-color: #dcdcdc;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: .5rem;
+        box-shadow: 0.2rem 0.2rem 0.2rem #414141; }
+        section.tripulacion .cards-tripulacion .card-tripulacion-informacion .button-tripulacion button:hover {
+          transform: scale(1.01);
+          box-shadow: 0.2rem 0.2rem 0.3rem #868686; }
+        section.tripulacion .cards-tripulacion .card-tripulacion-informacion .button-tripulacion button:active {
+          color: white;
+          background-color: #747474;
+          transform: scale(0.99);
+          box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
+
+/* MEDIA QUERIES DESKTOP */
+@media screen and (min-width: 768px) {
+  /*Desktop: Main: Página de Tripulación*/
+  main.pagina-tripulacion h1 {
+    margin-top: 4rem; }
+  main.pagina-tripulacion .icon-down {
+    margin-top: 18.5rem; }
+  /*Desktop: Section: Tripulación*/
+  section.tripulacion .cards-tripulacion .card-tripulacion-informacion {
+    width: 40rem;
+    height: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    grid-template-areas: "nombre-especialista img-tripulacion" "biografia img-tripulacion" "button-tripulacion img-tripulacion";
+    gap: 1rem; }
+    section.tripulacion .cards-tripulacion .card-tripulacion-informacion .img-tripulacion {
+      grid-area: img-tripulacion;
+      height: 26rem; }
+      section.tripulacion .cards-tripulacion .card-tripulacion-informacion .img-tripulacion img {
+        height: 100%; }
+    section.tripulacion .cards-tripulacion .card-tripulacion-informacion h3 {
+      grid-area: nombre-especialista; }
+    section.tripulacion .cards-tripulacion .card-tripulacion-informacion p {
+      grid-area: biografia;
+      height: 14rem; }
+    section.tripulacion .cards-tripulacion .card-tripulacion-informacion .button-tripulacion {
+      grid-area: button-tripulacion; } }
+
+/*Mobile: Main: Página de Revista*/
+main.pagina-revista {
+  height: 12rem;
+  background-image: url(../img/img-cableado.png);
+  background-size: cover;
+  background-position: center; }
+  main.pagina-revista h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.75rem;
+    line-height: 3.37rem;
+    color: white;
+    padding-top: 2rem; }
+  main.pagina-revista h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: white; }
+
+/*Mobile: Section: Noticias*/
+section.noticias {
+  padding: 4rem 5rem 1rem 5rem; }
+  section.noticias .cards-noticias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 4rem 0; }
+    section.noticias .cards-noticias .noticia-individual {
+      width: 24rem;
+      background-size: cover;
+      padding: 16rem 2rem 2rem 2rem;
+      border-radius: 1rem;
+      text-align: end; }
+      section.noticias .cards-noticias .noticia-individual h3 {
+        text-align: Left;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.12rem;
+        color: white;
+        margin-bottom: 1rem; }
+      section.noticias .cards-noticias .noticia-individual button {
+        font-weight: 500;
+        font-size: 1rem;
+        background-color: #dcdcdc;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: .5rem;
+        box-shadow: 0.2rem 0.2rem 0.2rem #414141; }
+        section.noticias .cards-noticias .noticia-individual button:hover {
+          transform: scale(1.01);
+          box-shadow: 0.2rem 0.2rem 0.3rem #868686; }
+        section.noticias .cards-noticias .noticia-individual button:active {
+          color: white;
+          background-color: #747474;
+          transform: scale(0.99);
+          box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
+    section.noticias .cards-noticias .noticia-img-uno {
+      background-image: url(../img/not-uno.png); }
+    section.noticias .cards-noticias .noticia-img-dos {
+      background-image: url(../img/not-dos.png); }
+    section.noticias .cards-noticias .noticia-img-tres {
+      background-image: url(../img/not-tres.png); }
+    section.noticias .cards-noticias .noticia-img-cuatro {
+      background-image: url(../img/not-cuatro.png); }
+    section.noticias .cards-noticias .noticia-img-cinco {
+      background-image: url(../img/not-cinco.png); }
+    section.noticias .cards-noticias .noticia-img-seis {
+      background-image: url(../img/not-seis.png); }
+  section.noticias .boton-mostrar-mas {
+    padding-top: 6rem;
+    text-align: center; }
+    section.noticias .boton-mostrar-mas button {
+      font-weight: 500;
+      font-size: 1rem;
+      background-color: #dcdcdc;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: .5rem;
+      box-shadow: 0.2rem 0.2rem 0.2rem #414141; }
+      section.noticias .boton-mostrar-mas button:hover {
+        transform: scale(1.01);
+        box-shadow: 0.2rem 0.2rem 0.3rem #868686; }
+      section.noticias .boton-mostrar-mas button:active {
+        color: white;
+        background-color: #747474;
+        transform: scale(0.99);
+        box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
+
+/*Mobile: Main: Página de Contacto*/
+main.pagina-contacto {
+  height: 10rem; }
+  main.pagina-contacto h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.75rem;
+    line-height: 3.37rem;
+    color: white;
+    padding-top: 2rem; }
+  main.pagina-contacto h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: white; }
+
+/*Mobile: Section: Form-Map*/
+section.form-map {
+  padding: 4rem 5rem 1rem 5rem; }
 
 /*Reset*/
 * {
@@ -163,7 +402,7 @@ header .nav-menu {
 main.pagina-inicio {
   background-image: url("../img/img-planeta.png"); }
   main.pagina-inicio h1 {
-    text-align: center;
+    text-align: left;
     font-weight: 700;
     font-size: 2.75rem;
     line-height: 3.37rem;
@@ -350,9 +589,10 @@ section.viaje-especificaciones {
         margin-top: 1rem; }
         section.viaje-especificaciones .form-check .form button:hover {
           transform: scale(1.01);
-          box-shadow: 0.3rem 0.3rem 0.3rem #353535; }
+          box-shadow: 0.2rem 0.2rem 0.3rem #868686; }
         section.viaje-especificaciones .form-check .form button:active {
-          background-color: #c5c5c5;
+          color: white;
+          background-color: #747474;
           transform: scale(0.99);
           box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
 

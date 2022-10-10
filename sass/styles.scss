@@ -6,6 +6,9 @@
 
 //Import: Page-Styles
 @import "page-styles/tecnologia";
+@import "page-styles/tripulacion";
+@import "page-styles/revista";
+@import "page-styles/contacto";
 
 
 /*Reset*/
@@ -61,7 +64,7 @@ main.pagina-inicio {
     @extend %main-image;
     background-image: url("../img/img-planeta.png");
     h1 {
-        @include h1 (center);
+        @include h1 (left);
         .h1-light {
             font-weight: 300;
             display: block;

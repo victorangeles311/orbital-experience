@@ -41,10 +41,11 @@
     box-shadow: 0.2rem 0.2rem 0.2rem rgb(65, 65, 65);
     &:hover {
         transform: scale(1.01);
-        box-shadow: 0.3rem 0.3rem 0.3rem rgb(53, 53, 53);
+        box-shadow: 0.2rem 0.2rem 0.3rem rgb(134, 134, 134);
     }
     &:active {
-        background-color: #c5c5c5;
+        color: white;
+        background-color: #747474;
         transform: scale(0.99);
         box-shadow: 0.1rem 0.1rem 0.1rem rgb(53, 53, 53);
     }

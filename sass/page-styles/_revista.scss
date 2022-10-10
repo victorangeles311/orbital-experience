@@ -1,0 +1,64 @@
+/*Mobile: Main: Página de Revista*/
+main.pagina-revista{
+    height: 12rem;
+    background-image: url(../img/img-cableado.png);
+    background-size: cover;
+    background-position: center;
+    h1 {
+        @include h1 (center);
+        padding-top: 2rem;
+    }
+    h2 {
+        @include h4 (center);
+    }
+}
+
+/*Mobile: Section: Noticias*/
+section.noticias{
+    padding: 4rem 5rem 1rem 5rem;
+    .cards-noticias{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 4rem 0;
+        .noticia-individual{
+            width: 24rem;
+            background-size: cover;
+            padding: 16rem 2rem 2rem 2rem;
+            border-radius: 1rem;
+            text-align: end;
+            h3 {
+                @include h3 (Left);
+                margin-bottom: 1rem;
+            }
+            button {
+                @include button;
+            }
+        }
+        .noticia-img-uno {
+            background-image: url(../img/not-uno.png);
+        }
+        .noticia-img-dos {
+            background-image: url(../img/not-dos.png);
+        }
+        .noticia-img-tres {
+            background-image: url(../img/not-tres.png);
+        }
+        .noticia-img-cuatro {
+            background-image: url(../img/not-cuatro.png);
+        }
+        .noticia-img-cinco {
+            background-image: url(../img/not-cinco.png);
+        }
+        .noticia-img-seis {
+            background-image: url(../img/not-seis.png);
+        }
+    }
+    .boton-mostrar-mas {
+        padding-top: 6rem;
+        text-align: center;
+        button {
+            @include button;
+        }
+    }
+}

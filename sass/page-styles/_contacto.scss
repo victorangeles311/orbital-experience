@@ -1,0 +1,16 @@
+/*Mobile: Main: Página de Contacto*/
+main.pagina-contacto{
+    height: 10rem;
+    h1 {
+        @include h1 (center);
+        padding-top: 2rem;
+    }
+    h2 {
+        @include h4 (center);
+    }
+}
+
+/*Mobile: Section: Form-Map*/
+section.form-map {
+    padding: 4rem 5rem 1rem 5rem;
+}

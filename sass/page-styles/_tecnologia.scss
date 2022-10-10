@@ -11,7 +11,7 @@ main.pagina-tecnologia {
     }
     .icon-down {
         @include icon-down;
-        margin-top: 22rem;
+        margin-top: 22.5rem;
     }
 }
 
@@ -22,14 +22,14 @@ section.transportes-bases {
         @include h2 (center);
         margin-bottom: 3rem;
         .h2-light {
-            font-weight: 300;
             display: block;
+            font-weight: 300;
         }
     }
     .cards-tecnologia {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 4rem 0;
         .card-tecnologia-contenedor {
             width: 24rem;
@@ -80,7 +80,9 @@ section.transportes-bases {
 @media screen and (min-width:768px) {
     
     /*Desktop: Main: Página de Tecnología*/
-    main.pagina-tecnologia .icon-down {
-        margin-top: 26rem;
+    main.pagina-tecnologia{
+        .icon-down {
+            margin-top: 26rem;
+        }
     }
 }
