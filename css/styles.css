@@ -341,7 +341,10 @@ section.noticias {
 
 /*Mobile: Main: Página de Contacto*/
 main.pagina-contacto {
-  height: 10rem; }
+  height: 12rem;
+  background-image: url(../img/img-despegue.png);
+  background-size: cover;
+  background-position: center; }
   main.pagina-contacto h1 {
     text-align: center;
     font-weight: 700;
@@ -358,7 +361,65 @@ main.pagina-contacto {
 
 /*Mobile: Section: Form-Map*/
 section.form-map {
-  padding: 4rem 5rem 1rem 5rem; }
+  padding: 3rem 5rem 1rem 5rem; }
+  section.form-map .form {
+    margin-bottom: 2rem;
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: left; }
+    section.form-map .form .text-field {
+      padding: .5rem 1rem .5rem 1rem; }
+      section.form-map .form .text-field ::placeholder {
+        background-color: black; }
+    section.form-map .form .button-enviar {
+      align-items: center;
+      text-align: center; }
+      section.form-map .form .button-enviar input {
+        font-weight: 500;
+        font-size: 1rem;
+        background-color: #dcdcdc;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: .5rem;
+        box-shadow: 0.2rem 0.2rem 0.2rem #414141; }
+        section.form-map .form .button-enviar input:hover {
+          transform: scale(1.01);
+          box-shadow: 0.2rem 0.2rem 0.3rem #868686; }
+        section.form-map .form .button-enviar input:active {
+          color: white;
+          background-color: #747474;
+          transform: scale(0.99);
+          box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
+  section.form-map .map .google-map {
+    border-radius: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem; }
+  section.form-map .map h3 {
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: white; }
+  section.form-map .map p {
+    color: #bfbfbf;
+    font-weight: 400;
+    font-size: 0.87rem;
+    line-height: 1.75rem; }
+
+/* MEDIA QUERIES DESKTOP */
+@media screen and (min-width: 768px) {
+  /*Desktop: Section: Form-Map*/
+  section.form-map {
+    padding: 3rem 10rem 1rem 5rem;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "form map"; }
+    section.form-map .form {
+      grid-area: form; }
+    section.form-map .map {
+      grid-area: map; } }
 
 /*Reset*/
 * {

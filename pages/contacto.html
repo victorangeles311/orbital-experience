@@ -71,47 +71,26 @@
 
     <!--Section: Form-Map-->
     <section class="form-map">
-        <form class="form" action="">
-            <fieldset>
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <div>
-                        <input type="text" id="nombre" placeholder="Placeholder">
-                    </div>
-                </div>
+        <div class="form">
+            <input class="text-field" type="text" id="nombre" placeholder="Nombre">
 
-                <div>
-                    <label for="apellido">Apellido</label>
-                    <div>
-                        <input type="text" id="apellido" placeholder="Placeholder">
-                    </div>
-                </div>
+            <input class="text-field" type="text" id="apellido" placeholder="Apellidos">
 
-                <div>
-                    <label for="correo">Correo electrónico</label>
-                    <div>
-                        <input type="email" id="correo" placeholder="Placeholder">
-                    </div>
-                </div>
+            <input class="text-field" type="email" id="correo" placeholder="Correo">
 
-                <div>
-                    <label for="mensaje">Tu mensaje</label>
-                    <div>
-                        <input type="text" id="mensaje" placeholder="Tu mensaje">
-                    </div>
-                </div>
-                    
-                <div>
-                    <input type="submit">
-                </div>
-            </fieldset>
-        </form>
+            <input class="text-field" type="text" id="texto" placeholder="Tu mensaje">
+
+            <input class="button-enviar" type="submit" value="Enviar">
+        </div>
+
         <div class="map">
-            <img src="../img/imagen-mapa.png" alt="imagen de muestra">
-            <img src="../img/icon-zoom-in.svg" alt="icono de zoom in">
-            <h3>lorem ipsum et mundus ergo</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo officiis vitae accusantium obcaecati quae, quod
-            dolorem possimus reiciendis fugiat voluptas! Libero sed ad voluptas quasi non nihil dolor cum quos.</p>
+            <iframe class="google-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6621.446532653444!2d-118.34007437862454!3d33.92252124511736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b5d8b4958bfb%3A0xc043ce6eb8378ff4!2sHawthorne%20Municipal%20Airport%20(HHR)!5e0!3m2!1ses-419!2smx!4v1665454134104!5m2!1ses-419!2smx"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <h3>Dirección de instalaciones</h3>
+            <p>12101 Crenshaw Blvd # 1, Hawthorne, CA 90250, Estados Unidos.</p>
         </div>
     </section>
 

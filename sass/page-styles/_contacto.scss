@@ -1,6 +1,9 @@
 /*Mobile: Main: Página de Contacto*/
 main.pagina-contacto{
-    height: 10rem;
+    height: 12rem;
+    background-image: url(../img/img-despegue.png);
+    background-size: cover;
+    background-position: center;
     h1 {
         @include h1 (center);
         padding-top: 2rem;
@@ -12,5 +15,59 @@ main.pagina-contacto{
 
 /*Mobile: Section: Form-Map*/
 section.form-map {
-    padding: 4rem 5rem 1rem 5rem;
+    padding: 3rem 5rem 1rem 5rem;
+    .form {
+        margin-bottom: 2rem;
+        border: 2px solid white;
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: left;
+        .text-field {
+            padding: .5rem 1rem .5rem 1rem;
+            ::placeholder {
+                background-color: black;
+            }
+        }
+        .button-enviar {
+            align-items: center;
+            text-align: center;
+            input {
+                @include button;
+            }                
+        }
+    }
+    
+    .map {
+        .google-map {
+            border-radius: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        h3 {
+            @include h4 (left);
+        }
+        p {
+            color: rgb(191, 191, 191);
+            font-weight: 400;
+            font-size: 0.87rem;
+            line-height: 1.75rem;
+        }
+    }
+}
+
+
+/* MEDIA QUERIES DESKTOP */
+@media screen and (min-width:768px) {
+
+    /*Desktop: Section: Form-Map*/
+    section.form-map {
+        padding: 3rem 10rem 1rem 5rem;
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "form map";
+        .form {grid-area: form;}
+        .map {grid-area: map;}
+    }
 }
