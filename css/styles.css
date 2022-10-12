@@ -364,33 +364,36 @@ section.form-map {
   padding: 3rem 5rem 1rem 5rem; }
   section.form-map .form {
     margin-bottom: 2rem;
-    border: 2px solid white;
     border-radius: 1rem;
     padding: 2rem;
-    text-align: left; }
+    text-align: center;
+    background-color: #1a1a1a; }
     section.form-map .form .text-field {
-      padding: .5rem 1rem .5rem 1rem; }
-      section.form-map .form .text-field ::placeholder {
-        background-color: black; }
+      width: 100%;
+      padding: .5rem 1rem .5rem 1rem;
+      background-color: #0b0b0b;
+      border: 2px solid #cbcbcb;
+      border-radius: .25rem;
+      margin-bottom: 1rem;
+      color: white; }
+    section.form-map .form .user-message {
+      height: 12rem; }
     section.form-map .form .button-enviar {
-      align-items: center;
-      text-align: center; }
-      section.form-map .form .button-enviar input {
-        font-weight: 500;
-        font-size: 1rem;
-        background-color: #dcdcdc;
-        padding: 0.75rem 1rem;
-        border: none;
-        border-radius: .5rem;
-        box-shadow: 0.2rem 0.2rem 0.2rem #414141; }
-        section.form-map .form .button-enviar input:hover {
-          transform: scale(1.01);
-          box-shadow: 0.2rem 0.2rem 0.3rem #868686; }
-        section.form-map .form .button-enviar input:active {
-          color: white;
-          background-color: #747474;
-          transform: scale(0.99);
-          box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
+      font-weight: 500;
+      font-size: 1rem;
+      background-color: #dcdcdc;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: .5rem;
+      box-shadow: 0.2rem 0.2rem 0.2rem #414141; }
+      section.form-map .form .button-enviar:hover {
+        transform: scale(1.01);
+        box-shadow: 0.2rem 0.2rem 0.3rem #868686; }
+      section.form-map .form .button-enviar:active {
+        color: white;
+        background-color: #747474;
+        transform: scale(0.99);
+        box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
   section.form-map .map .google-map {
     border-radius: 1rem;
     justify-content: center;

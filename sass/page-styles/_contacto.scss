@@ -18,22 +18,24 @@ section.form-map {
     padding: 3rem 5rem 1rem 5rem;
     .form {
         margin-bottom: 2rem;
-        border: 2px solid white;
         border-radius: 1rem;
         padding: 2rem;
-        text-align: left;
+        text-align: center;
+        background-color: nth($colores, 5);
         .text-field {
+            width: 100%;
             padding: .5rem 1rem .5rem 1rem;
-            ::placeholder {
-                background-color: black;
-            }
+            background-color: $color-principal;
+            border: 2px solid nth($colores, 3);
+            border-radius: .25rem;
+            margin-bottom: 1rem;
+            color: nth($colores, 1);
+        }
+        .user-message {
+            height: 12rem;
         }
         .button-enviar {
-            align-items: center;
-            text-align: center;
-            input {
-                @include button;
-            }                
+            @include button;        
         }
     }
     
