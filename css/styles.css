@@ -120,7 +120,7 @@ section.transportes-bases {
 @media screen and (min-width: 768px) {
   /*Desktop: Main: Página de Tecnología*/
   main.pagina-tecnologia .icon-down {
-    margin-top: 26rem; } }
+    margin-top: 26.5rem; } }
 
 /*Mobile: Main: Página de Tripulación*/
 main.pagina-tripulacion {
@@ -227,7 +227,7 @@ section.tripulacion {
   main.pagina-tripulacion h1 {
     margin-top: 4rem; }
   main.pagina-tripulacion .icon-down {
-    margin-top: 18.5rem; }
+    margin-top: 15.5rem; }
   /*Desktop: Section: Tripulación*/
   section.tripulacion .cards-tripulacion .card-tripulacion-informacion {
     width: 40rem;
