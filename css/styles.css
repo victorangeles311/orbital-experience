@@ -123,7 +123,7 @@ section.transportes-bases {
 main.pagina-tripulacion {
   background-image: url("../img/img-infinito.png"); }
   main.pagina-tripulacion h1 {
-    text-align: right;
+    text-align: center;
     font-weight: 700;
     font-size: 2.75rem;
     line-height: 3.37rem;
@@ -265,6 +265,7 @@ main.pagina-revista {
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: white;
+    font-weight: 400;
     padding-bottom: 1rem; }
 
 /*Mobile: Section: Noticias*/
@@ -355,6 +356,7 @@ main.pagina-contacto {
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: white;
+    font-weight: 400;
     padding-bottom: 1rem; }
 
 /*Mobile: Section: Form-Map*/

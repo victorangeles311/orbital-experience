@@ -4,7 +4,7 @@ main.pagina-tripulacion {
     background-image: url("../img/img-infinito.png");
 
     h1 {
-        @include h1 (right);
+        @include h1 (center);
         margin-top: 1rem;
         .h1-light{
             font-weight: 300;

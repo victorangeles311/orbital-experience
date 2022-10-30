@@ -10,6 +10,7 @@ main.pagina-contacto{
     }
     h2 {
         @include h4 (center);
+        font-weight: 400;
         padding-bottom: 1rem;
     }
 }
