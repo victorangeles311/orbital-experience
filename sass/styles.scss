@@ -26,9 +26,15 @@ body {
 
 /*Mobile: Header*/
 header {
-    @extend %header;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    z-index: 3;
     .logo img {
-        height: 3.8rem;
+        height: 3.4rem;
     }
     .imagotipo {
         display: none;
@@ -61,10 +67,10 @@ header {
 
 /*Mobile: Main: Página de Inicio*/
 main.pagina-inicio {
-    @extend %main-image;
+    @extend %main-image-mobile;
     background-image: url("../img/img-planeta.png");
     h1 {
-        @include h1 (left);
+        @include h1 (center);
         .h1-light {
             font-weight: 300;
             display: block;
@@ -72,7 +78,7 @@ main.pagina-inicio {
     }
     h4 {
         @include h4 (center);
-        margin-top: 18rem;
+        margin-top: 14rem;
     }    
     .icon-down {
         @include icon-down;
@@ -82,52 +88,49 @@ main.pagina-inicio {
 /*Mobile: Section: Viaje espacial*/
 section.viaje-espacial {
     background-image: url(../img/gif-space-orbital.gif);
-    background-size: 180%;
+    background-size: 200%;
     background-repeat: no-repeat;
-    background-position: center;
     background-position: top;
-    .secondary-menu ul {
-        display: flex;
-        background-color: nth($colores, 3);
-        padding-left: 0;
-        justify-content: space-between;
-        align-items: center;
-        li {
-            color: nth($colores, 2);
-            list-style: none;
-            text-align: center;
-            font-weight: 400;
-            font-size: .9rem;
-            padding: 1rem 1.8rem;
-            border-radius: 0.4rem;
-            &:hover {
-                background-color: #E8E8E8;
+    .secondary-menu {
+        ul {
+            display: flex;
+            overflow: scroll;
+            width: auto;
+            background-color: nth($colores, 3);
+            padding: 0 .5rem;
+            justify-content: space-between;
+            align-items: center;
+            li {
+                color: nth($colores, 2);
+                list-style: none;
+                text-align: center;
+                font-weight: 400;
+                font-size: .9rem;
+                padding: 1rem 1.75rem;
+                border-radius: 0.4rem;
+                &:active {
+                    font-weight: 500;
+                }
             }
-            &:active {
-                font-weight: 500;
+            .button-focus {
+                background-color: #FAFAFA;
+                font-weight: 700;
+                box-shadow: 0.25rem 0rem 0.25rem grey;
             }
-        }
-        .button-focus {
-            background-color: #FAFAFA;
-            font-weight: 700;
-            box-shadow: 0.25rem 0rem 0.25rem grey;
         }
     }
     .bar-vertical {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        padding: 0;
         li {
             color: white;
             border-radius: 1.75rem;
             list-style: none;
             font-weight: 400;
             font-size: 0.87rem;
-            padding: 0.75rem 2.12rem;
+            padding: .5rem;
             text-align: center;
-            margin: 0.75rem;
-            &:hover {
-                background-color: rgba(218, 218, 218, 0.25);
-            }
             &:active {
                 background-color: rgba(116, 116, 116, 0.25);
                 font-weight: 700;
@@ -143,15 +146,15 @@ section.viaje-espacial {
         display: none;
     }
     .carrusel-mobile {
-        margin-top: 19rem;
+        padding-top: 13rem;
     }
 }
 
 /*Mobile: Section: Viaje especificaciones*/
 section.viaje-especificaciones {
-    padding: 3.75rem 5rem 3rem 5rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
     h2 {
-        @include h2 (Left);
+        @include h2 (center);
         padding-top: 1rem;
         margin-bottom: 2rem;
     }
@@ -159,12 +162,12 @@ section.viaje-especificaciones {
         display: none;
     }
     .pie-linea {
-        justify-self: center;
+        justify-self: left;
         display: flex;
         flex-direction: column;
         list-style: none;
         color: nth($colores, 1);
-        font-size: 0.87rem;
+        font-size: 0.8rem;
         font-weight: 700;
         line-height: 1.25rem;
         gap: 2rem;
@@ -181,9 +184,10 @@ section.viaje-especificaciones {
         font-size: 0.87rem;
         font-weight: 400;
         line-height: 1.5rem;
-        padding: 2rem 2rem 1rem 0;
+        padding: 2rem 0 1rem 0;
         h4 {
             @include h4 (left);
+            padding-bottom: .5rem
         }
     }
     h4.titulo-info {
@@ -191,18 +195,19 @@ section.viaje-especificaciones {
     }
     .listado-uno {
         @include list (2rem);
+        margin-bottom: 0;
     }
     .listado-dos {
         @include list (2rem);
     }
     .form-check {
-        margin-top: 5rem;
+        padding: 2.5rem 0 0 0;
         .form {
             background-color: nth($colores, 5);
             border: 2px solid nth($colores, 1);
             border-radius: 0.62rem;
             text-align: center;
-            padding: 2rem;
+            padding: 1rem;
             h3 {
                 @include h3 (center);
                 padding-bottom: 1rem;
@@ -235,11 +240,12 @@ section.viaje-especificaciones {
 /* Mobile: Footer */
 footer {
     background-color: nth($colores, 4);
-    padding: 2.5rem 0rem 2.5rem 0rem;
+    padding: 3rem 0rem 2rem 0rem;
     margin-top: 2rem;
     text-align: center;
     .otros-enlaces {
         list-style: none;
+        padding-left: 0;
         li {
             padding-bottom: 1rem;
             a {
@@ -266,7 +272,6 @@ footer {
         line-height: 20px;
         color: nth($colores, 1);
         text-align: center;
-        padding-left: 2.5rem;
         span {
             display: block;
         }
@@ -275,10 +280,17 @@ footer {
 
 
 
+@media (min-width:481px) and (max-width:768px){
+
+}
+
+
+
 @media screen and (min-width:769px) {
 
     /*Desktop: Header*/
     header {
+        padding: 2rem 5rem 1.5rem 5rem;
         .nav-menu {
             .menu-boton {
                 margin: 0rem 1rem 0rem 1rem;
@@ -323,6 +335,9 @@ footer {
                     font-size: 1rem;
                     border-radius: 1rem;
                     padding: 1rem 3rem;
+                    &:hover {
+                            background-color: #E8E8E8;
+                        }
                 }
             }
         }
@@ -333,6 +348,9 @@ footer {
             flex-direction: column;
             li {
                 margin: 0.75rem 0 0.75rem 0;
+                &:hover {
+                    background-color: rgba(218, 218, 218, 0.25);
+                }
             }
         }
         .img-scroll {

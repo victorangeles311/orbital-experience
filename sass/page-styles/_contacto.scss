@@ -1,25 +1,26 @@
 /*Mobile: Main: Página de Contacto*/
 main.pagina-contacto{
-    height: 12rem;
     background-image: url(../img/img-despegue.png);
     background-size: cover;
     background-position: center;
+    padding: 1.5rem;
     h1 {
         @include h1 (center);
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
     h2 {
         @include h4 (center);
+        padding-bottom: 1rem;
     }
 }
 
 /*Mobile: Section: Form-Map*/
 section.form-map {
-    padding: 3rem 5rem 1rem 5rem;
+    padding: 3rem 1.5rem 0rem 1.5rem;
     .form {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         border-radius: 1rem;
-        padding: 2rem;
+        padding: 1.5rem;
         text-align: center;
         background-color: nth($colores, 5);
         .text-field {
@@ -43,7 +44,7 @@ section.form-map {
         .google-map {
             border-radius: 1rem;
             justify-content: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
         h3 {
             @include h4 (left);

@@ -1,26 +1,27 @@
 /*Mobile: Main: Página de Revista*/
 main.pagina-revista{
-    height: 12rem;
     background-image: url(../img/img-cableado.png);
     background-size: cover;
     background-position: center;
+    padding: 1.5rem;
     h1 {
         @include h1 (center);
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
     h2 {
         @include h4 (center);
+        padding-bottom: 1rem;
     }
 }
 
 /*Mobile: Section: Noticias*/
 section.noticias{
-    padding: 4rem 5rem 1rem 5rem;
+    padding: 3rem 1.5rem 1rem 1.5rem;
     .cards-noticias{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        gap: 4rem 0;
+        gap: 4rem;
         .noticia-individual{
             width: 24rem;
             background-size: cover;
@@ -55,7 +56,7 @@ section.noticias{
         }
     }
     .boton-mostrar-mas {
-        padding-top: 6rem;
+        padding-top: 4rem;
         text-align: center;
         button {
             @include button;

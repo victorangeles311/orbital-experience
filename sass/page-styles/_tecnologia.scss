@@ -11,18 +11,18 @@ main.pagina-tecnologia {
     }
     .icon-down {
         @include icon-down;
-        margin-top: 22.5rem;
+        margin-top: 13rem;
     }
 }
 
 /*Mobile: Section: Transportes y bases espaciales*/
 section.transportes-bases {
-    padding: 4rem 5rem 1rem 5rem;
+    padding: 4rem 1.5rem 1.5rem 1.5rem;
     h2 {
         @include h2 (center);
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
+        font-size: 1.75rem;
         .h2-light {
-            display: block;
             font-weight: 300;
         }
     }
@@ -30,7 +30,7 @@ section.transportes-bases {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        gap: 4rem 0;
+        gap: 3rem;
         .card-tecnologia-contenedor {
             width: 24rem;
             .card-tecnologia-imagen {

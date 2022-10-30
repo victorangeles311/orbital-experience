@@ -1,13 +1,12 @@
 /*Mobile: Main: Página de Tripulación*/
 main.pagina-tripulacion {
-    @extend %main-image;
+    @extend %main-image-mobile;
     background-image: url("../img/img-infinito.png");
 
     h1 {
         @include h1 (right);
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         .h1-light{
-            display: block;
             font-weight: 300;
         }
     }
@@ -23,13 +22,13 @@ main.pagina-tripulacion {
     }
     .icon-down {
         @include icon-down;
-        margin-top: 12.5rem;
+        margin-top: 9rem;
     }
 }
 
 /*Mobile: Section: Tripulación*/
 section.tripulacion{
-    padding: 4rem 5rem 1rem 5rem;
+    padding: 4rem 1.5rem 1.5rem 1.5rem;
     h2 {
         @include h2 (center);
         margin-bottom: 3rem;
@@ -42,7 +41,7 @@ section.tripulacion{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        gap: 4rem 0;
+        gap: 4rem;
         .card-tripulacion-informacion{
             height: auto;
             width: auto;
