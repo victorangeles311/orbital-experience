@@ -1,6 +1,6 @@
 /*Mobile: Main: Página de Tecnología*/
 main.pagina-tecnologia {
-    @extend %main-image;
+    @extend %main-image-mobile;
     background-image: url("../img/img-astronauta.png");
     h1 {
         @include h1 (center);
@@ -11,7 +11,7 @@ main.pagina-tecnologia {
     }
     .icon-down {
         @include icon-down;
-        margin-top: 13rem;
+        margin-top: 18rem;
     }
 }
 
@@ -76,8 +76,38 @@ section.transportes-bases {
     }
 }
 
+
+
+
+
+/* MEDIA QUERIES TABLET */
+@media (min-width:481px) and (max-width:768px) {
+
+    /*Tablet: Main: Página de Tecnología*/
+    main.pagina-tecnologia {
+        .icon-down {
+            margin-top: 21rem;
+        }
+    }
+
+    /*Tablet: Section: Transportes y bases espaciales*/
+    section.transportes-bases {
+        padding: 4rem 2rem 1.5rem 2rem;
+        h2 {
+            @include h2 (center);
+            .h2-light {
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+
+
 /* MEDIA QUERIES DESKTOP */
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     
     /*Desktop: Main: Página de Tecnología*/
     main.pagina-tecnologia{

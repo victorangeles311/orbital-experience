@@ -129,7 +129,7 @@ section.viaje-espacial {
             list-style: none;
             font-weight: 400;
             font-size: 0.87rem;
-            padding: .5rem;
+            padding: .75rem;
             text-align: center;
             &:active {
                 background-color: rgba(116, 116, 116, 0.25);
@@ -170,6 +170,7 @@ section.viaje-especificaciones {
         font-size: 0.8rem;
         font-weight: 700;
         line-height: 1.25rem;
+        padding-left: 0;
         gap: 2rem;
         li {
             text-align: center;
@@ -280,9 +281,57 @@ footer {
 
 
 
+
+
+/* MEDIA QUERIES TABLET */
 @media (min-width:481px) and (max-width:768px){
 
+    /*Tablet: Header*/
+    header {
+        padding: 2.5rem;
+    }
+
+    /*Tablet: Main: Página de Inicio*/
+    main.pagina-inicio {
+        padding: 3rem 2rem 2rem 2rem;
+        h1 {
+            @include h1 (left);
+        }
+        h4 {
+            margin-top: 16rem;
+        }
+    }
+
+    /*Tablet: Section: Viaje espacial*/
+    section.viaje-espacial {
+        .secondary-menu {
+            ul {
+                justify-content: space-evenly;
+            }
+        }
+        .bar-vertical {
+            justify-content: space-evenly;
+            padding-top: 1rem;
+            li {
+                padding: .5rem 1.75rem;
+            }
+        }
+        .carrusel-mobile {
+            padding-top: 24.5rem;
+        }
+    }
+    /*Tablet: Section: Viaje especificaciones*/
+    section.viaje-especificaciones {
+        padding: 3rem 2rem;
+        .form-check {
+            .form {
+                padding: 3rem 2rem;
+            }
+        }
+    }
 }
+
+
 
 
 

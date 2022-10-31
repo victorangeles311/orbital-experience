@@ -1,13 +1,7 @@
 @charset "UTF-8";
-main.pagina-tripulacion, main.pagina-inicio {
+main.pagina-tecnologia, main.pagina-tripulacion, main.pagina-inicio {
   height: 100vh;
   padding: 2.5rem 1.5rem 1.5rem 1.5rem;
-  background-size: cover;
-  background-position: center; }
-
-main.pagina-tecnologia {
-  height: 100vh;
-  padding: 3.75rem 5rem 1.25rem 5rem;
   background-size: cover;
   background-position: center; }
 
@@ -29,7 +23,7 @@ main.pagina-tecnologia {
     animation-name: indicate-down;
     animation-duration: .8s;
     animation-iteration-count: infinite;
-    margin-top: 13rem; }
+    margin-top: 18rem; }
 
 @keyframes indicate-down {
   0% {
@@ -113,8 +107,25 @@ section.transportes-bases {
         line-height: 1.75rem;
         list-style: square; }
 
+/* MEDIA QUERIES TABLET */
+@media (min-width: 481px) and (max-width: 768px) {
+  /*Tablet: Main: Página de Tecnología*/
+  main.pagina-tecnologia .icon-down {
+    margin-top: 21rem; }
+  /*Tablet: Section: Transportes y bases espaciales*/
+  section.transportes-bases {
+    padding: 4rem 2rem 1.5rem 2rem; }
+    section.transportes-bases h2 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      color: white; }
+      section.transportes-bases h2 .h2-light {
+        display: block; } }
+
 /* MEDIA QUERIES DESKTOP */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   /*Desktop: Main: Página de Tecnología*/
   main.pagina-tecnologia .icon-down {
     margin-top: 26.5rem; } }
@@ -217,8 +228,23 @@ section.tripulacion {
           transform: scale(0.99);
           box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
 
+/* MEDIA QUERIES TABLET */
+@media (min-width: 481px) and (max-width: 768px) {
+  /*Tablet: Main: Página de Tripulación*/
+  main.pagina-tripulacion h1 {
+    text-align: right;
+    font-weight: 700;
+    font-size: 2.75rem;
+    line-height: 3.37rem;
+    color: white; }
+  main.pagina-tripulacion .icon-down {
+    margin-top: 16.5rem; }
+  /*Tablet: Section: Tripulación*/
+  section.tripulacion .cards-tripulacion .card-tripulacion-informacion {
+    padding: 3.5rem 2rem 3rem 2rem; } }
+
 /* MEDIA QUERIES DESKTOP */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   /*Desktop: Main: Página de Tripulación*/
   main.pagina-tripulacion h1 {
     margin-top: 4rem; }
@@ -410,8 +436,21 @@ section.form-map {
     font-size: 0.87rem;
     line-height: 1.75rem; }
 
+/* MEDIA QUERIES TABLET */
+@media (min-width: 481px) and (max-width: 768px) {
+  /*Tablet: Section: Form-Map*/
+  section.form-map {
+    padding: 4rem 2rem 1.5rem 2rem; }
+    section.form-map .form {
+      padding: 2.5rem;
+      margin-bottom: 6rem; }
+    section.form-map .map {
+      margin-bottom: 2rem; }
+      section.form-map .map p {
+        margin-bottom: 2rem; } }
+
 /* MEDIA QUERIES DESKTOP */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   /*Desktop: Section: Form-Map*/
   section.form-map {
     padding: 3rem 10rem 1rem 5rem;
@@ -538,7 +577,7 @@ section.viaje-espacial {
       list-style: none;
       font-weight: 400;
       font-size: 0.87rem;
-      padding: .5rem;
+      padding: .75rem;
       text-align: center; }
       section.viaje-espacial .bar-vertical li:active {
         background-color: rgba(116, 116, 116, 0.25);
@@ -574,6 +613,7 @@ section.viaje-especificaciones {
     font-size: 0.8rem;
     font-weight: 700;
     line-height: 1.25rem;
+    padding-left: 0;
     gap: 2rem; }
     section.viaje-especificaciones .pie-linea li {
       text-align: center; }
@@ -697,6 +737,38 @@ footer {
     text-align: center; }
     footer .derechos span {
       display: block; }
+
+/* MEDIA QUERIES TABLET */
+@media (min-width: 481px) and (max-width: 768px) {
+  /*Tablet: Header*/
+  header {
+    padding: 2.5rem; }
+  /*Tablet: Main: Página de Inicio*/
+  main.pagina-inicio {
+    padding: 3rem 2rem 2rem 2rem; }
+    main.pagina-inicio h1 {
+      text-align: left;
+      font-weight: 700;
+      font-size: 2.75rem;
+      line-height: 3.37rem;
+      color: white; }
+    main.pagina-inicio h4 {
+      margin-top: 16rem; }
+  /*Tablet: Section: Viaje espacial*/
+  section.viaje-espacial .secondary-menu ul {
+    justify-content: space-evenly; }
+  section.viaje-espacial .bar-vertical {
+    justify-content: space-evenly;
+    padding-top: 1rem; }
+    section.viaje-espacial .bar-vertical li {
+      padding: .5rem 1.75rem; }
+  section.viaje-espacial .carrusel-mobile {
+    padding-top: 24.5rem; }
+  /*Tablet: Section: Viaje especificaciones*/
+  section.viaje-especificaciones {
+    padding: 3rem 2rem; }
+    section.viaje-especificaciones .form-check .form {
+      padding: 3rem 2rem; } }
 
 @media screen and (min-width: 769px) {
   /*Desktop: Header*/

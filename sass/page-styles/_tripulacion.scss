@@ -78,8 +78,37 @@ section.tripulacion{
 
 
 
+
+
+/* MEDIA QUERIES TABLET */
+@media (min-width:481px) and (max-width:768px) {
+
+    /*Tablet: Main: Página de Tripulación*/
+    main.pagina-tripulacion {
+        h1 {
+                @include h1 (right);
+        }
+        .icon-down {
+            margin-top: 16.5rem;
+        }
+    }
+    
+    /*Tablet: Section: Tripulación*/
+    section.tripulacion {
+        .cards-tripulacion {
+            .card-tripulacion-informacion {
+                padding: 3.5rem 2rem 3rem 2rem;
+            }
+        }
+    }
+}
+
+
+
+
+
 /* MEDIA QUERIES DESKTOP */
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
 
     /*Desktop: Main: Página de Tripulación*/
     main.pagina-tripulacion {
