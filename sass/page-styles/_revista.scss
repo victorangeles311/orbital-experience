@@ -28,7 +28,7 @@ section.noticias{
             background-size: cover;
             padding: 16rem 2rem 2rem 2rem;
             border-radius: 1rem;
-            text-align: end;
+            text-align: center;
             h3 {
                 @include h3 (Left);
                 margin-bottom: 1rem;
@@ -61,6 +61,23 @@ section.noticias{
         text-align: center;
         button {
             @include button;
+        }
+    }
+}
+
+
+
+
+
+/* MEDIA QUERIES DESKTOP */
+@media screen and (min-width:481px) {
+
+    /*Tablet: Section: Noticias*/
+    section.noticias {
+        .cards-noticias {
+            .noticia-individual {
+                text-align: end;
+            }
         }
     }
 }

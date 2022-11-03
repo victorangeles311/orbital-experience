@@ -322,10 +322,52 @@ footer {
     }
     /*Tablet: Section: Viaje especificaciones*/
     section.viaje-especificaciones {
-        padding: 3rem 2rem;
+        padding: 3rem 4rem;
+        gap: 2rem;
+        display: grid;
+        grid-template-areas:
+            "titulo-viaje titulo-viaje"
+            "pie-linea principal-info"
+            "titulo-info form-check"
+            "listado-uno form-check"
+            "listado-dos form-check"
+            "espacio-blanco form-check";
+    
+        .titulo-viaje {
+            grid-area: titulo-viaje;
+            text-align: left;
+            padding: 0;
+        }
+    
+        .pie-linea {
+            grid-area: pie-linea;
+            gap: 1rem;
+            padding-bottom: 2rem;
+        }
+    
+        .principal-info {
+            grid-area: principal-info;
+            padding: 0;
+            line-height: 1.75rem;
+        }
+    
+        .titulo-info {
+            grid-area: titulo-info;
+        }
+    
+        .listado-uno {
+            grid-area: listado-uno;
+        }
+    
+        .listado-dos {
+            grid-area: listado-dos;
+        }
+    
         .form-check {
+            grid-area: form-check;
+            padding: 0;
             .form {
-                padding: 3rem 2rem;
+                    padding: 2rem 1.5rem;
             }
         }
     }
@@ -339,7 +381,8 @@ footer {
 
     /*Desktop: Header*/
     header {
-        padding: 2rem 5rem 1.5rem 5rem;
+        padding: 2rem 3rem 1.5rem 3rem;
+        justify-content: space-between;
         .nav-menu {
             .menu-boton {
                 margin: 0rem 1rem 0rem 1rem;
@@ -351,13 +394,17 @@ footer {
         .imagotipo {
             display: block;
             img {
-                height: 3.8rem;
+                height: 3rem;
             }
         }
     }
 
     /*Desktop: Main: Página de Inicio*/
     main.pagina-inicio{
+        padding: 3rem 5rem;
+        h1 {
+            text-align: left;
+        }
         h4 {
             margin-top: 22rem;
         }
@@ -380,13 +427,14 @@ footer {
             ul {
                 border-radius: 16px;
                 gap: 1rem;
+                padding: 0;
                 li {
                     font-size: 1rem;
                     border-radius: 1rem;
                     padding: 1rem 3rem;
                     &:hover {
-                            background-color: #E8E8E8;
-                        }
+                        background-color: #E8E8E8;
+                    }
                 }
             }
         }
@@ -395,8 +443,9 @@ footer {
             justify-self: center;
             align-self: center;
             flex-direction: column;
+            gap: 2rem;
             li {
-                margin: 0.75rem 0 0.75rem 0;
+                padding: .5rem 2rem;
                 &:hover {
                     background-color: rgba(218, 218, 218, 0.25);
                 }
@@ -427,6 +476,8 @@ footer {
 
     /*Desktop: Section: Viaje especificaciones*/
     section.viaje-especificaciones {
+        padding: 3rem 4rem;
+        gap: 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr .5fr;
         grid-template-areas:
@@ -439,18 +490,23 @@ footer {
         gap: 0.62rem;
         .titulo-viaje {
             grid-area: titulo-viaje;
+            text-align: left;
         }
         .linea-proceso {
             display: block;
             grid-area: linea-proceso;
-            justify-self: center;
-            margin-left: 2rem;
+            text-align: center;
+            img{
+                justify-content: center;
+                min-width: 50%;
+                max-width: 100%;
+            }
         }
         .pie-linea {
             grid-area: pie-linea;
             display: flex;
             flex-direction: row;
-            gap: 14rem;
+            gap: 8rem;
         }
         .principal-info{
             grid-area: principal-info;
@@ -469,6 +525,9 @@ footer {
             grid-area: form-check;
             margin-top: 2rem;
             padding: 0;
+            .form {
+                    padding: 3rem 2rem;
+                }
         }
     }
 
@@ -482,7 +541,7 @@ footer {
             display: flex;
             li {
                 a {
-                    padding: 0rem 2.18rem;
+                    padding: 0rem 2rem;
                 }
             }
         }

@@ -56,7 +56,7 @@ section.transportes-bases {
         padding: 16rem 2rem 2rem 2rem;
         border-radius: 1rem;
         margin-bottom: 1rem;
-        text-align: end; }
+        text-align: center; }
         section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .card-tecnologia-imagen h3 {
           text-align: Left;
           font-weight: 400;
@@ -128,7 +128,11 @@ section.transportes-bases {
 @media screen and (min-width: 769px) {
   /*Desktop: Main: Página de Tecnología*/
   main.pagina-tecnologia .icon-down {
-    margin-top: 26.5rem; } }
+    margin-top: 27rem; }
+  section.transportes-bases h2 .h2-light {
+    display: block; }
+  section.transportes-bases .cards-tecnologia .card-tecnologia-contenedor .card-tecnologia-imagen {
+    text-align: end; } }
 
 /*Mobile: Main: Página de Tripulación*/
 main.pagina-tripulacion {
@@ -229,7 +233,7 @@ section.tripulacion {
           box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
 
 /* MEDIA QUERIES TABLET */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) {
   /*Tablet: Main: Página de Tripulación*/
   main.pagina-tripulacion h1 {
     text-align: right;
@@ -241,36 +245,34 @@ section.tripulacion {
     margin-top: 16.5rem; }
   /*Tablet: Section: Tripulación*/
   section.tripulacion .cards-tripulacion .card-tripulacion-informacion {
-    padding: 3.5rem 2rem 3rem 2rem; } }
+    width: 40rem;
+    height: auto;
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    grid-template-areas: "nombre-especialista img-tripulacion" "biografia img-tripulacion" "button-tripulacion img-tripulacion";
+    gap: 1rem;
+    align-items: center; }
+    section.tripulacion .cards-tripulacion .card-tripulacion-informacion .img-tripulacion {
+      grid-area: img-tripulacion;
+      height: 18rem; }
+    section.tripulacion .cards-tripulacion .card-tripulacion-informacion h3 {
+      grid-area: nombre-especialista; }
+    section.tripulacion .cards-tripulacion .card-tripulacion-informacion p {
+      grid-area: biografia; }
+    section.tripulacion .cards-tripulacion .card-tripulacion-informacion .button-tripulacion {
+      grid-area: button-tripulacion; } }
 
 /* MEDIA QUERIES DESKTOP */
 @media screen and (min-width: 769px) {
   /*Desktop: Main: Página de Tripulación*/
-  main.pagina-tripulacion h1 {
-    margin-top: 4rem; }
-  main.pagina-tripulacion .icon-down {
-    margin-top: 15.5rem; }
-  /*Desktop: Section: Tripulación*/
-  section.tripulacion .cards-tripulacion .card-tripulacion-informacion {
-    width: 40rem;
-    height: auto;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    grid-template-areas: "nombre-especialista img-tripulacion" "biografia img-tripulacion" "button-tripulacion img-tripulacion";
-    gap: 1rem; }
-    section.tripulacion .cards-tripulacion .card-tripulacion-informacion .img-tripulacion {
-      grid-area: img-tripulacion;
-      height: 26rem; }
-      section.tripulacion .cards-tripulacion .card-tripulacion-informacion .img-tripulacion img {
-        height: 100%; }
-    section.tripulacion .cards-tripulacion .card-tripulacion-informacion h3 {
-      grid-area: nombre-especialista; }
-    section.tripulacion .cards-tripulacion .card-tripulacion-informacion p {
-      grid-area: biografia;
-      height: 14rem; }
-    section.tripulacion .cards-tripulacion .card-tripulacion-informacion .button-tripulacion {
-      grid-area: button-tripulacion; } }
+  main.pagina-tripulacion {
+    padding: 3rem 5rem; }
+    main.pagina-tripulacion .icon-down {
+      margin-top: 22.5rem; }
+  /*Tablet: Section: Tripulación*/
+  section.tripulacion .cards-tripulacion .card-tripulacion-informacion .img-tripulacion {
+    height: 26rem; } }
 
 /*Mobile: Main: Página de Revista*/
 main.pagina-revista {
@@ -307,7 +309,7 @@ section.noticias {
       background-size: cover;
       padding: 16rem 2rem 2rem 2rem;
       border-radius: 1rem;
-      text-align: end; }
+      text-align: center; }
       section.noticias .cards-noticias .noticia-individual h3 {
         text-align: Left;
         font-weight: 400;
@@ -362,6 +364,12 @@ section.noticias {
         background-color: #747474;
         transform: scale(0.99);
         box-shadow: 0.1rem 0.1rem 0.1rem #353535; }
+
+/* MEDIA QUERIES DESKTOP */
+@media screen and (min-width: 481px) {
+  /*Tablet: Section: Noticias*/
+  section.noticias .cards-noticias .noticia-individual {
+    text-align: end; } }
 
 /*Mobile: Main: Página de Contacto*/
 main.pagina-contacto {
@@ -766,14 +774,39 @@ footer {
     padding-top: 24.5rem; }
   /*Tablet: Section: Viaje especificaciones*/
   section.viaje-especificaciones {
-    padding: 3rem 2rem; }
-    section.viaje-especificaciones .form-check .form {
-      padding: 3rem 2rem; } }
+    padding: 3rem 4rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-areas: "titulo-viaje titulo-viaje" "pie-linea principal-info" "titulo-info form-check" "listado-uno form-check" "listado-dos form-check" "espacio-blanco form-check"; }
+    section.viaje-especificaciones .titulo-viaje {
+      grid-area: titulo-viaje;
+      text-align: left;
+      padding: 0; }
+    section.viaje-especificaciones .pie-linea {
+      grid-area: pie-linea;
+      gap: 1rem;
+      padding-bottom: 2rem; }
+    section.viaje-especificaciones .principal-info {
+      grid-area: principal-info;
+      padding: 0;
+      line-height: 1.75rem; }
+    section.viaje-especificaciones .titulo-info {
+      grid-area: titulo-info; }
+    section.viaje-especificaciones .listado-uno {
+      grid-area: listado-uno; }
+    section.viaje-especificaciones .listado-dos {
+      grid-area: listado-dos; }
+    section.viaje-especificaciones .form-check {
+      grid-area: form-check;
+      padding: 0; }
+      section.viaje-especificaciones .form-check .form {
+        padding: 2rem 1.5rem; } }
 
 @media screen and (min-width: 769px) {
   /*Desktop: Header*/
   header {
-    padding: 2rem 5rem 1.5rem 5rem; }
+    padding: 2rem 3rem 1.5rem 3rem;
+    justify-content: space-between; }
     header .nav-menu .menu-boton {
       margin: 0rem 1rem 0rem 1rem; }
     header .logo {
@@ -781,10 +814,14 @@ footer {
     header .imagotipo {
       display: block; }
       header .imagotipo img {
-        height: 3.8rem; }
+        height: 3rem; }
   /*Desktop: Main: Página de Inicio*/
-  main.pagina-inicio h4 {
-    margin-top: 22rem; }
+  main.pagina-inicio {
+    padding: 3rem 5rem; }
+    main.pagina-inicio h1 {
+      text-align: left; }
+    main.pagina-inicio h4 {
+      margin-top: 22rem; }
   /*Desktop: Section: Viaje espacial*/
   section.viaje-espacial {
     height: 100vh;
@@ -799,7 +836,8 @@ footer {
       justify-self: center; }
       section.viaje-espacial .secondary-menu ul {
         border-radius: 16px;
-        gap: 1rem; }
+        gap: 1rem;
+        padding: 0; }
         section.viaje-espacial .secondary-menu ul li {
           font-size: 1rem;
           border-radius: 1rem;
@@ -810,9 +848,10 @@ footer {
       grid-area: menu-vertical;
       justify-self: center;
       align-self: center;
-      flex-direction: column; }
+      flex-direction: column;
+      gap: 2rem; }
       section.viaje-espacial .bar-vertical li {
-        margin: 0.75rem 0 0.75rem 0; }
+        padding: .5rem 2rem; }
         section.viaje-espacial .bar-vertical li:hover {
           background-color: rgba(218, 218, 218, 0.25); }
     section.viaje-espacial .img-scroll {
@@ -833,22 +872,28 @@ footer {
       display: none; }
   /*Desktop: Section: Viaje especificaciones*/
   section.viaje-especificaciones {
+    padding: 3rem 4rem;
+    gap: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr .5fr;
     grid-template-areas: "titulo-viaje titulo-viaje titulo-viaje titulo-viaje" "linea-proceso linea-proceso linea-proceso linea-proceso" "pie-linea pie-linea pie-linea pie-linea" "principal-info principal-info form-check form-check" "titulo-info titulo-info form-check form-check" "listado-uno listado-dos form-check form-check";
     gap: 0.62rem; }
     section.viaje-especificaciones .titulo-viaje {
-      grid-area: titulo-viaje; }
+      grid-area: titulo-viaje;
+      text-align: left; }
     section.viaje-especificaciones .linea-proceso {
       display: block;
       grid-area: linea-proceso;
-      justify-self: center;
-      margin-left: 2rem; }
+      text-align: center; }
+      section.viaje-especificaciones .linea-proceso img {
+        justify-content: center;
+        min-width: 50%;
+        max-width: 100%; }
     section.viaje-especificaciones .pie-linea {
       grid-area: pie-linea;
       display: flex;
       flex-direction: row;
-      gap: 14rem; }
+      gap: 8rem; }
     section.viaje-especificaciones .principal-info {
       grid-area: principal-info; }
     section.viaje-especificaciones .titulo-info {
@@ -862,6 +907,8 @@ footer {
       grid-area: form-check;
       margin-top: 2rem;
       padding: 0; }
+      section.viaje-especificaciones .form-check .form {
+        padding: 3rem 2rem; }
   /* Desktop: Footer */
   footer {
     padding: 3.5rem 5rem 1.5rem 5rem;
@@ -871,7 +918,7 @@ footer {
     footer .otros-enlaces {
       display: flex; }
       footer .otros-enlaces li a {
-        padding: 0rem 2.18rem; }
+        padding: 0rem 2rem; }
     footer .derechos {
       text-align: end; }
       footer .derechos span {

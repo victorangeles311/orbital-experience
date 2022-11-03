@@ -38,7 +38,7 @@ section.transportes-bases {
                 padding: 16rem 2rem 2rem 2rem;
                 border-radius: 1rem;
                 margin-bottom: 1rem;
-                text-align: end;
+                text-align: center;
                 h3 {
                     @include h3 (Left);
                     margin-bottom: 1rem;
@@ -112,7 +112,21 @@ section.transportes-bases {
     /*Desktop: Main: Página de Tecnología*/
     main.pagina-tecnologia{
         .icon-down {
-            margin-top: 26.5rem;
+            margin-top: 27rem;
+        }
+    }
+    section.transportes-bases{
+        h2 {
+            .h2-light{
+                display: block;
+            }
+        }
+        .cards-tecnologia {
+            .card-tecnologia-contenedor {
+                .card-tecnologia-imagen {
+                    text-align: end;
+                }
+            }
         }
     }
 }
